@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LDExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro XL V8.0 - 131118" dateTime="date_and_time#2017-6-19-14:47:45" content="Fichier source LD" DTDVersion="41"></fileHeader>
+	<contentHeader name="Projet" version="0.0.43" dateTime="date_and_time#2017-6-14-12:47:47"></contentHeader>
+	<program>
+		<identProgram name="Convoyeur_Prog1" type="section" task="MAST"></identProgram>
+		<LDSource nbColumns="11">
+			<networkLD>
+				<typeLine>
+					<contact typeContact="closedContact" contactVariableName="Arret_Urgence"></contact>
+					<contact typeContact="openContact" contactVariableName="Communication_Robot"></contact>
+					<contact typeContact="openContact" contactVariableName="Capteur_Entrepot"></contact>
+					<contact typeContact="closedContact" contactVariableName="Capteur_Livraison"></contact>
+					<shortCircuit>
+						<VLink></VLink>
+						<HLink nbCells="6"></HLink>
+					</shortCircuit>
+					<coil typeCoil="setCoil" coilVariableName="M1_Avant"></coil>
+				</typeLine>
+				<typeLine>
+					<emptyCell nbCells="10"></emptyCell>
+					<coil typeCoil="setCoil" coilVariableName="M2_Avant"></coil>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="openContact" contactVariableName="Capteur_Livraison"></contact>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="closedContact" contactVariableName="Capteur_Entrepot"></contact>
+					</shortCircuit>
+					<shortCircuit>
+						<VLink></VLink>
+						<HLink nbCells="8"></HLink>
+					</shortCircuit>
+					<coil typeCoil="resetCoil" coilVariableName="M1_Avant"></coil>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="openContact" contactVariableName="Arret_Urgence"></contact>
+					<HLink nbCells="1"></HLink>
+					<emptyCell nbCells="8"></emptyCell>
+					<coil typeCoil="resetCoil" coilVariableName="M2_Avant"></coil>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="1"></emptyLine>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="closedContact" contactVariableName="Arret_Urgence"></contact>
+					<contact typeContact="openContact" contactVariableName="Communication_Robot"></contact>
+					<contact typeContact="openContact" contactVariableName="Capteur_Livraison"></contact>
+					<contact typeContact="closedContact" contactVariableName="Capteur_Entrepot"></contact>
+					<shortCircuit>
+						<VLink></VLink>
+						<HLink nbCells="6"></HLink>
+					</shortCircuit>
+					<coil typeCoil="setCoil" coilVariableName="M1_Arriere"></coil>
+				</typeLine>
+				<typeLine>
+					<emptyCell nbCells="10"></emptyCell>
+					<coil typeCoil="setCoil" coilVariableName="M2_Arriere"></coil>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="openContact" contactVariableName="Capteur_Entrepot"></contact>
+					<shortCircuit>
+						<VLink></VLink>
+						<contact typeContact="closedContact" contactVariableName="Capteur_Livraison"></contact>
+					</shortCircuit>
+					<shortCircuit>
+						<VLink></VLink>
+						<HLink nbCells="8"></HLink>
+					</shortCircuit>
+					<coil typeCoil="resetCoil" coilVariableName="M1_Arriere"></coil>
+				</typeLine>
+				<typeLine>
+					<contact typeContact="openContact" contactVariableName="Arret_Urgence"></contact>
+					<HLink nbCells="1"></HLink>
+					<emptyCell nbCells="8"></emptyCell>
+					<coil typeCoil="resetCoil" coilVariableName="M2_Arriere"></coil>
+				</typeLine>
+				<typeLine>
+					<emptyLine nbRows="91"></emptyLine>
+				</typeLine>
+			</networkLD>
+		</LDSource>
+	</program>
+	<dataBlock>
+		<variables name="M2_Avant" typeName="EBOOL" topologicalAddress="%Q0.2.4">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="Capteur_Livraison" typeName="EBOOL" topologicalAddress="%I0.1.4">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="M2_Arriere" typeName="EBOOL" topologicalAddress="%Q0.2.5">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="Communication_Robot" typeName="EBOOL" topologicalAddress="%I0.1.1">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="M1_Arriere" typeName="EBOOL" topologicalAddress="%Q0.2.3">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="Arret_Urgence" typeName="EBOOL" topologicalAddress="%I0.1.0">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="Capteur_Entrepot" typeName="EBOOL" topologicalAddress="%I0.1.5">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+		<variables name="M1_Avant" typeName="EBOOL" topologicalAddress="%Q0.2.2">
+			<attribute name="TimeStampSource" value="3"></attribute>
+		</variables>
+	</dataBlock>
+</LDExchangeFile>
